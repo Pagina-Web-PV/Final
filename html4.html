@@ -1,0 +1,317 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css2/estilo5.css">
+		<title>Felicidad vs Trabajo</title>
+		<script src="js/jquery-1.10.1.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/entrega.js"></script> 
+		<link rel="shortcut icon" type="image/x-icon" href="imagenes/favicon.ico">
+		<script type="text/javascript" src="js/comunas.js"></script> <!-- creates states. -->
+		<link href="css2/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+	    <!-- ENCABEZADO -->
+		<header id="header">
+			<h1>TRABAJO Y FELICIDAD</h1>
+		</header>
+
+	
+
+        <!-- PAGINA PRINCIPAL -->
+		<section class="main">
+		    
+
+		    <section class="izquierda">
+				<article class="preguntas">
+				    <ul>
+
+				        <li class="p1" id="boton_modo"><a href="#">¿DÓNDE SE ES MÁS FELIZ?</a></li>
+				        
+					<script>
+						document.getElementById("boton_modo").onclick = function() {myFunction()};
+
+						function myFunction() {
+						    $(mapa2).show();
+							$(mapa1).hide();
+							$(mapa3).hide();
+							$(mapa4).hide();
+						}
+					</script>
+
+						<li class="p2" id="boton_modo2"><a href="#">¿DÓNDE SE TRABAJA MÁS?</a></li>
+						<script>
+							document.getElementById("boton_modo2").onclick = function() {myFunction2()};
+
+							function myFunction2() {
+							    $(mapa3).show();
+								$(mapa1).hide();
+								$(mapa2).hide();
+								$(mapa4).hide();
+							}
+						</script>
+						<li class="p3"  id="boton_modo3"><a href="#">¿DÓNDE SE ES MÁS PRODUCTIVO?</a></li>
+						<script>
+							document.getElementById("boton_modo3").onclick = function() {myFunction3()};
+
+							function myFunction3() {
+							    $(mapa4).show();
+								$(mapa1).hide();
+								$(mapa2).hide();
+								$(mapa3).hide();
+							}
+						</script>
+
+
+						
+
+					</ul>
+			    </article>
+			 
+				    	
+				<article class="mapas">
+				    	<br>
+				    	<br>
+				    	<br>
+				    	<br>
+				    	<br>
+				    	<br>
+				    	<img id="mapa1" src="imagenes/Mapa.jpg"  title="cuando pase"/>
+				    	<img id="mapa2" style="display:none" src=imagenes/FELICIDAD.jpg tittle="mapa de felicidad">
+				    	<img id="mapa4" style="display:none" src=imagenes/PRODUCTIVIDAD.jpg tittle="paises">
+				    	<img id="mapa3" style="display:none" src=imagenes/HORAS.jpg tittle="paises">
+				   
+
+				    	<br>
+				    	<br>
+				    	<br>
+				    	<br>
+			    </article>
+			</section>
+			
+		
+		    <aside class="aparte1" id="aparte" >
+			    <!-- el contenido del aparte va aquí -->
+			    
+				<h2 class="asd"> ¿Sabías qué...?</h2>
+				<br>
+				<p class="asd">Por lo general los paises que trabajan menos horas,</p>
+				<p class="asd"> son más productivos y felices.</p>
+				<br>
+				<br>
+				<article id="comparacion1">
+				<form method="get">
+					<select id="opciones" name="opciones" onchange="cambiarA(this)">
+	 					 <option value="1">Seleccionar Pais 1</option>
+	 					 <option value="2">Alemania</option>
+	 					 <option value="3">Australia</option>
+	 					 <option value="4">Austria</option>
+	 					 <option value="5">Belgica</option>
+	 					 <option value="6">Canadá</option>
+	 					 <option value="7">Chile</option>
+	 					 <option value="8">Dinamarca</option>
+	 					 <option value="9">Eslovaquia</option>
+	 					 <option value="10">Eslovenia</option>
+	 					 <option value="11">España</option>
+	 					 <option value="12">Estados Unidos</option>
+	 					 <option value="13">Estonia</option>
+	 					 <option value="14">Finlandia</option>
+	 					 <option value="15">Francia</option>
+	 					 <option value="16">Gran Bretaña</option>
+	 					 <option value="17">Grecia</option>
+	 					 <option value="18">Holanda</option>
+	 					 <option value="19">Hungria</option>
+	 					 <option value="20">Irlanda</option>
+	 					 <option value="21">Israel</option>
+	 					 <option value="22">Italia</option>
+	 					 <option value="23">Japón</option>
+	 					 <option value="24">Latvia</option>
+	 					 <option value="25">Lituania</option>
+	 					 <option value="26">Luxemburgo</option>
+	 					 <option value="27">México</option>
+	 					 <option value="28">Noruega</option>
+	 					 <option value="29">Nueva Zelanda</option>
+	 					 <option value="30">Polonia</option>
+	 					 <option value="31">Portugal</option>
+	 					 <option value="32">Republica Checa</option>
+	 					 <option value="33">Rusia</option>
+	 					 <option value="34">Suecia</option>
+	 					 <option value="35">Suiza</option>
+	 					 <option value="36">Turquia</option>
+					</select>
+				</form>
+				
+				
+				<img class="imagen1" width="30%" name="Imagen">
+			    <script>
+					var _img = new Array();
+						_img[2] = new Image(); _img[2].src="imagenes/Alemania.jpg";
+					    _img[3] = new Image(); _img[3].src="imagenes/Australia.jpg" ;
+					    _img[4] = new Image(); _img[4].src="imagenes/Austria.jpg";
+					    _img[5] = new Image(); _img[5].src="imagenes/Belgica.jpg";
+					    _img[6] = new Image(); _img[6].src="imagenes/Canadá.jpg";
+					    _img[7] = new Image(); _img[7].src="imagenes/Chile.jpg";
+					    _img[8] = new Image(); _img[8].src="imagenes/Dinamarca.jpg";
+					    _img[9] = new Image(); _img[9].src="imagenes/Eslovaquia.jpg";
+					    _img[10] = new Image(); _img[10].src="imagenes/Eslovenia.jpg";
+					    _img[11] = new Image(); _img[11].src="imagenes/España.jpg";
+					    _img[12] = new Image(); _img[12].src="imagenes/Estados Unidos.jpg";
+					    _img[13] = new Image(); _img[13].src="imagenes/Estonia.jpg";
+					    _img[14] = new Image(); _img[14].src="imagenes/Finlandia.jpg";
+					    _img[15] = new Image(); _img[15].src="imagenes/Francia.jpg";
+					    _img[16] = new Image(); _img[16].src="imagenes/Gran Bretaña.jpg";
+					    _img[17] = new Image(); _img[17].src="imagenes/Grecia.jpg";
+					    _img[18] = new Image(); _img[18].src="imagenes/Holanda.jpg";
+					    _img[19] = new Image(); _img[19].src="imagenes/Hungria.jpg";
+					    _img[20] = new Image(); _img[20].src="imagenes/Irlanda.jpg";
+					    _img[21] = new Image(); _img[21].src="imagenes/Israel.jpg";
+					    _img[22] = new Image(); _img[22].src="imagenes/Italia.jpg";
+					    _img[23] = new Image(); _img[23].src="imagenes/Japón.jpg";
+					    _img[24] = new Image(); _img[24].src="imagenes/Latvia.jpg";
+					    _img[25] = new Image(); _img[25].src="imagenes/Lituania.jpg";
+					    _img[26] = new Image(); _img[26].src="imagenes/Luxemburgo.jpg";
+					    _img[27] = new Image(); _img[27].src="imagenes/México.jpg";
+					    _img[28] = new Image(); _img[28].src="imagenes/Noruega.jpg";
+					    _img[29] = new Image(); _img[29].src="imagenes/Nueva Zelanda.jpg";
+					    _img[30] = new Image(); _img[30].src="imagenes/Polonia.jpg";
+					    _img[31] = new Image(); _img[31].src="imagenes/Portugal.jpg";
+					    _img[32] = new Image(); _img[32].src="imagenes/Republica Checa.jpg";
+					    _img[33] = new Image(); _img[33].src="imagenes/Rusia.jpg";
+					    _img[34] = new Image(); _img[34].src="imagenes/Suecia.jpg";
+					    _img[35] = new Image(); _img[35].src="imagenes/Suiza.jpg";
+					    _img[36] = new Image(); _img[36].src="imagenes/Turquia.jpg";
+					function cambiarA(_obj)
+					{
+					  if(!_obj)return;
+					  var _index = _obj.selectedIndex;
+					  if(!_index)return;
+					  var _item  = _obj[_index].value;
+					  if(!_item)return;
+					  if(_item<0 || _item >=_img.length)return;
+					  document.images["Imagen"].src=_img[_item].src;
+					}
+				</script>
+				</article>
+
+			    <br>
+			    <article id="comparacion2">
+				<form method="get">
+					<select id="opciones" name="opciones" onchange="cambiarA2(this)">
+	 					 <option value="1">Seleccionar Pais 1</option>
+	 					 <option value="2">Alemania</option>
+	 					 <option value="3">Australia</option>
+	 					 <option value="4">Austria</option>
+	 					 <option value="5">Belgica</option>
+	 					 <option value="6">Canadá</option>
+	 					 <option value="7">Chile</option>
+	 					 <option value="8">Dinamarca</option>
+	 					 <option value="9">Eslovaquia</option>
+	 					 <option value="10">Eslovenia</option>
+	 					 <option value="11">España</option>
+	 					 <option value="12">Estados Unidos</option>
+	 					 <option value="13">Estonia</option>
+	 					 <option value="14">Finlandia</option>
+	 					 <option value="15">Francia</option>
+	 					 <option value="16">Gran Bretaña</option>
+	 					 <option value="17">Grecia</option>
+	 					 <option value="18">Holanda</option>
+	 					 <option value="19">Hungria</option>
+	 					 <option value="20">Irlanda</option>
+	 					 <option value="21">Israel</option>
+	 					 <option value="22">Italia</option>
+	 					 <option value="23">Japón</option>
+	 					 <option value="24">Latvia</option>
+	 					 <option value="25">Lituania</option>
+	 					 <option value="26">Luxemburgo</option>
+	 					 <option value="27">México</option>
+	 					 <option value="28">Noruega</option>
+	 					 <option value="29">Nueva Zelanda</option>
+	 					 <option value="30">Polonia</option>
+	 					 <option value="31">Portugal</option>
+	 					 <option value="32">Republica Checa</option>
+	 					 <option value="33">Rusia</option>
+	 					 <option value="34">Suecia</option>
+	 					 <option value="35">Suiza</option>
+	 					 <option value="36">Turquia</option>
+					</select>
+				</form>
+				
+				
+				<img class="imagen2" width="30%" name="Imagen2">
+			    <script>
+					var _img = new Array();
+						_img[2] = new Image(); _img[2].src="imagenes/Alemania.jpg";
+					    _img[3] = new Image(); _img[3].src="imagenes/Australia.jpg" ;
+					    _img[4] = new Image(); _img[4].src="imagenes/Austria.jpg";
+					    _img[5] = new Image(); _img[5].src="imagenes/Belgica.jpg";
+					    _img[6] = new Image(); _img[6].src="imagenes/Canadá.jpg";
+					    _img[7] = new Image(); _img[7].src="imagenes/Chile.jpg";
+					    _img[8] = new Image(); _img[8].src="imagenes/Dinamarca.jpg";
+					    _img[9] = new Image(); _img[9].src="imagenes/Eslovaquia.jpg";
+					    _img[10] = new Image(); _img[10].src="imagenes/Eslovenia.jpg";
+					    _img[11] = new Image(); _img[11].src="imagenes/España.jpg";
+					    _img[12] = new Image(); _img[12].src="imagenes/Estados Unidos.jpg";
+					    _img[13] = new Image(); _img[13].src="imagenes/Estonia.jpg";
+					    _img[14] = new Image(); _img[14].src="imagenes/Finlandia.jpg";
+					    _img[15] = new Image(); _img[15].src="imagenes/Francia.jpg";
+					    _img[16] = new Image(); _img[16].src="imagenes/Gran Bretaña.jpg";
+					    _img[17] = new Image(); _img[17].src="imagenes/Grecia.jpg";
+					    _img[18] = new Image(); _img[18].src="imagenes/Holanda.jpg";
+					    _img[19] = new Image(); _img[19].src="imagenes/Hungria.jpg";
+					    _img[20] = new Image(); _img[20].src="imagenes/Irlanda.jpg";
+					    _img[21] = new Image(); _img[21].src="imagenes/Israel.jpg";
+					    _img[22] = new Image(); _img[22].src="imagenes/Italia.jpg";
+					    _img[23] = new Image(); _img[23].src="imagenes/Japón.jpg";
+					    _img[24] = new Image(); _img[24].src="imagenes/Latvia.jpg";
+					    _img[25] = new Image(); _img[25].src="imagenes/Lituania.jpg";
+					    _img[26] = new Image(); _img[26].src="imagenes/Luxemburgo.jpg";
+					    _img[27] = new Image(); _img[27].src="imagenes/México.jpg";
+					    _img[28] = new Image(); _img[28].src="imagenes/Noruega.jpg";
+					    _img[29] = new Image(); _img[29].src="imagenes/Nueva Zelanda.jpg";
+					    _img[30] = new Image(); _img[30].src="imagenes/Polonia.jpg";
+					    _img[31] = new Image(); _img[31].src="imagenes/Portugal.jpg";
+					    _img[32] = new Image(); _img[32].src="imagenes/Republica Checa.jpg";
+					    _img[33] = new Image(); _img[33].src="imagenes/Rusia.jpg";
+					    _img[34] = new Image(); _img[34].src="imagenes/Suecia.jpg";
+					    _img[35] = new Image(); _img[35].src="imagenes/Suiza.jpg";
+					    _img[36] = new Image(); _img[36].src="imagenes/Turquia.jpg";
+					function cambiarA2(_obj)
+					{
+					  if(!_obj)return;
+					  var _index = _obj.selectedIndex;
+					  if(!_index)return;
+					  var _item  = _obj[_index].value;
+					  if(!_item)return;
+					  if(_item<0 || _item >=_img.length)return;
+					  document.images["Imagen2"].src=_img[_item].src;
+					}
+				</script>
+				</article>
+
+			   
+			</aside>
+
+
+
+		
+		</section>
+
+
+
+       
+
+        <!-- pIE DE PAGINA-->
+		<footer>
+		    <!-- el contenido del pie de página va aquí -->
+		    <p> Magdalena Gajardo - Heber Herrera - Victoria López - Camila Silva </p>
+		</footer>
+
+		
+
+		<script type="text/javascript">
+			alert("Entrega Final. Trabajo vs Felicidad");
+		</script>
+
+	</body>
+</html>
